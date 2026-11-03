@@ -7,3 +7,5 @@
 - 부피·겉넓이: https://eaglemath7.github.io/suri-solids/#measure
 
 검증: `node verify.cjs`
+
+정다면체 다섯 종류를 모서리를 따라 접고 펼칠 수 있습니다. 펼친 전개도의 면 겹침, 면 크기 보존, 모서리 연결을 자동 검증합니다.
