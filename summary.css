@@ -12,3 +12,5 @@ tbody th:first-child{font-size:13px;line-height:1.5;padding:8px 7px;overflow-wra
 thead th:first-child{z-index:6}
 @media(max-width:650px){th:first-child{width:88px}tbody th:first-child{font-size:12px;padding:7px 5px}table{min-width:690px}}
 @media print{th:first-child{position:static;box-shadow:none}}
+
+.edge-equal{position:absolute;left:100%;top:50%;transform:translate(-50%,-50%);z-index:3;font-size:28px;font-weight:900;line-height:1;pointer-events:none}.red-pair .edge-equal{color:#d74458}.blue-pair .edge-equal{color:#2e68bd}
