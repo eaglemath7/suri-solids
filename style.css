@@ -32,3 +32,29 @@ details.poly-definition{display:block}details.poly-definition>summary{font-size:
 #profileButtons{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}#profileButtons button{white-space:normal}#tiltControl{display:flex;align-items:center;gap:8px;font-size:12px;margin:8px 0}#heightControl input,#tiltControl input{min-width:0;flex:1}#showSection{margin-top:10px}#revolve .seg{flex-wrap:wrap}#revolve .tools{flex-wrap:wrap}#revolve .tools #spinProgress{flex-basis:35%}
 @media(max-width:550px){#revolve .title h1{font-size:17px}#profileButtons{grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}#profileButtons button{font-size:10px;padding:7px 3px}#revolve .revolve-grid{grid-template-columns:1fr 1.3fr;gap:6px}#revolve #profile{height:215px}#revolve #revCanvas{height:215px}#revolve .panel-head{padding:8px 6px}#revolve .panel-head h2{font-size:10px}#revolve .small-hint{font-size:9px;margin:4px}#revolve .tools{gap:4px;padding:5px}#revolve .tools button{font-size:10px;padding:6px}#revolve .slice-panel{margin-top:8px;padding:10px;flex-direction:row;gap:4px}#revolve .slice-left{min-width:0}#revolve .slice-left h2{font-size:12px}#revolve .slice-result{width:110px;flex-shrink:0}#revolve #sliceSvg{width:110px;height:110px}#revolve .seg button{font-size:10px;padding:7px 5px}#revolve .question{padding:7px 9px;font-size:12px;margin-bottom:7px}}
 #revolve .revolve-grid>article{min-width:0}#revolve canvas{max-width:100%}@media(max-width:550px){#revolve .revolve-grid{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}#revolve .tools button{padding:5px;font-size:9px}#revolve .tools #spinProgress{width:70px}#revolve .panel-head span{font-size:9px}#revolve .slice-result button{font-size:10px;padding:7px}}
+/* 모바일: 개수 입력과 수리 도움을 도형 위에서 바로 사용 */
+@media(max-width:600px){
+#poly:not(.thought-mode) .explore-grid{display:flex;flex-direction:column;gap:6px}
+#poly:not(.thought-mode) .poly-card{order:-1;padding:8px 10px}
+#poly:not(.thought-mode) .poly-card h2{font-size:12px;margin:0 0 3px}
+#poly:not(.thought-mode) .poly-card>p{font-size:10px;line-height:1.4;margin:3px 0}
+#poly:not(.thought-mode) #polyForm{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin-top:6px}
+#poly:not(.thought-mode) .count-answer-row{display:flex;flex-direction:column;gap:3px;align-items:stretch}
+#poly:not(.thought-mode) .count-answer-row>label{justify-content:center;font-size:11px!important}
+#poly:not(.thought-mode) .answer-control{justify-content:center;gap:3px;font-size:10px}
+#poly:not(.thought-mode) .answer-control input{width:39px;min-width:0;padding:5px 2px;height:31px}
+#poly:not(.thought-mode) .suri-count-help{width:31px;height:31px}
+#poly:not(.thought-mode) .suri-help-tip{grid-column:1/-1;font-size:10px;margin:0}
+#poly:not(.thought-mode) #polyForm>.primary{grid-column:1/3;padding:6px;font-size:11px}
+#poly:not(.thought-mode) #polyHint{position:absolute;right:10px;bottom:8px;width:calc(33% - 9px);font-size:10px;padding:6px 2px}
+#poly:not(.thought-mode) #polyMessage{font-size:11px;margin:4px 0;line-height:1.35;padding-right:33%}
+#poly:not(.thought-mode) #polyCanvas{height:clamp(160px,25dvh,230px)}
+#poly:not(.thought-mode) #polyGestureHint{display:none}
+#poly:not(.thought-mode) .poly-transport{padding:5px 7px}
+#poly:not(.thought-mode) .tools{padding:3px 6px;gap:5px}
+#poly:not(.thought-mode) .tools label{font-size:9px}
+#poly:not(.thought-mode) .tools button{padding:4px 7px}
+#poly:not(.thought-mode) .cube-net-picker{padding:4px 6px}
+#poly:not(.thought-mode) #cubeNetList[data-count="11"] svg{height:20px}
+#poly:not(.thought-mode) #cubeNetList[data-count="11"] span{display:none}
+}
