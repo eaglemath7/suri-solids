@@ -8,3 +8,6 @@ for(let [start,end] of [[[50,90],[300,90]],[[180,20],[180,170]],[[60,30],[300,17
 console.log('PASS: horizontal, vertical and diagonal drag planes are normalized and cut the solid; short taps do not cut.');
 {let view={yaw:-.55,pitch:.3,w:360,h:200,scale:60,fitCenter:[0,0],depthCenter:0},a=PolySections.planeFromStroke([30,25],[310,170],view),b=PolySections.planeFromStroke([310,170],[30,25],view);assert(Math.hypot(...a.n.map((x,i)=>x-b.n[i]))<1e-9);assert(Math.abs(a.d-b.d)<1e-9)}
 console.log('PASS: reversing a drag makes the same cutting plane.');
+assert.equal(PolySections.polygonName([[0,0,0],[2,0,0],[1,2,0]]),'이등변삼각형');assert.equal(PolySections.polygonName([[0,0,0],[1,0,0],[0,1,0]]),'직각이등변삼각형');assert.equal(PolySections.polygonName([[0,0,0],[2,0,0],[1,Math.sqrt(3),0]]),'정삼각형');
+{let m=G.polyhedron(6),faces=m.faces.map(f=>f.map(i=>m.points[i])),normal=PolySections.obliqueNormal(30,45),s=PolySections.cut(faces,'custom',.8,{n:normal,d:0});assert.equal(PolySections.polygonName(s.loops[0]),'이등변삼각형');for(let tilt of [1,17,30,55,89])for(let direction of [0,45,112,270]){let n=PolySections.obliqueNormal(tilt,direction);assert(Math.abs(Math.hypot(...n)-1)<1e-9);assert(PolySections.cut(faces,'custom',.2,{n,d:0}).loops.length)}}
+console.log('PASS: arbitrary oblique angles produce valid cuts and an actual isosceles triangular cube section.');
