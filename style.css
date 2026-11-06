@@ -92,3 +92,12 @@ body:has(#poly:not([hidden])) header{height:40px;min-height:40px}
 #poly:not(.thought-mode) .net-key{display:none}
 }
 .inline-suri-help{font-weight:400;color:#72869b}#poly:not(.thought-mode) #polyHint{position:static;width:auto;grid-column:3;align-self:stretch;margin:0;font-size:10px;padding:6px 3px}#poly:not(.thought-mode) #polyForm>.primary{margin:0}@media(max-width:600px){.poly-info-details summary{font-size:10px;white-space:nowrap}.inline-suri-help{font-size:9px}}
+@media(max-width:600px){
+#poly:not(.thought-mode) .count-answer-row{flex-direction:row;align-items:center;justify-content:center;gap:2px;min-width:0}
+#poly:not(.thought-mode) .count-answer-row>label{font-size:10px!important;flex:none;letter-spacing:-.4px}
+#poly:not(.thought-mode) .answer-control{gap:2px;font-size:9px;min-width:0}
+#poly:not(.thought-mode) .answer-control input{width:27px;height:31px;padding:4px 1px;font-size:12px;border-radius:7px;appearance:textfield;-moz-appearance:textfield}
+#poly:not(.thought-mode) .answer-control input::-webkit-inner-spin-button,#poly:not(.thought-mode) .answer-control input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+#poly:not(.thought-mode) .suri-count-help{width:30px;height:31px;padding:2px}
+#poly:not(.thought-mode) #polyForm{column-gap:3px;row-gap:5px}
+}
