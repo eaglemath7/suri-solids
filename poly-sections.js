@@ -7,5 +7,6 @@ function cut(faces,mode='level',position=0){
  let ref=Math.abs(n[1])<.9?[0,1,0]:[1,0,0],u=[n[1]*ref[2]-n[2]*ref[1],n[2]*ref[0]-n[0]*ref[2],n[0]*ref[1]-n[1]*ref[0]],len=Math.hypot(...u);u=u.map(x=>x/len);let v=[n[1]*u[2]-n[2]*u[1],n[2]*u[0]-n[0]*u[2],n[0]*u[1]-n[1]*u[0]];
  return {n,d,u,v,loops,faces:faces.map(f=>S.clip(f,n,d)),flat:loops.map(l=>l.map(p=>[S.dot(p,u),S.dot(p,v)]))};
 }
-root.PolySections={cut};
+function split(faces,mode='level',position=0){let section=cut(faces,mode,position),positive=faces.map(f=>S.clip(f,section.n.map(x=>-x),-section.d));return {...section,negative:section.faces,positive}}
+root.PolySections={cut,split};
 })(typeof window==='undefined'?globalThis:window);
