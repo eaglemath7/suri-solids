@@ -104,3 +104,4 @@ body:has(#poly:not([hidden])) header{height:40px;min-height:40px}
 /* 각도 계산을 작은 두 열로 정리 */
 .angle-equations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px 12px;width:100%}.angle-equations>span{white-space:nowrap;font-size:12px}.angle-solid-name{font-size:.94em}.angle-line:last-child .angle-equations{grid-template-columns:1fr}.angle-line:last-child .angle-equations>span{white-space:normal}
 @media(max-width:600px){.angle-line{padding:7px 8px;gap:3px}.angle-line>b{font-size:11px}.angle-equations{gap:4px 6px}.angle-equations>span{font-size:10px;letter-spacing:-.35px;line-height:1.6;white-space:nowrap}.angle-solid-name{font-size:9px}.thinking>p{font-size:11px;line-height:1.6}}
+.angle-solid-name{color:#1756ad;font-weight:700}.angle-equations em{color:#d71920;font-weight:800}
