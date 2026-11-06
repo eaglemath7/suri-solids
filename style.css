@@ -61,3 +61,33 @@ details.poly-definition{display:block}details.poly-definition>summary{font-size:
 .poly-info-details{font-size:12px;color:#6b7e97;margin:5px 0}.poly-info-details summary{cursor:pointer;font-weight:700}.poly-info-details p{line-height:1.5;margin:5px 0}.poly-slice-toggle{position:absolute;top:8px;right:8px;z-index:4;background:#fff9fc;border-color:#e1b6c7;font-size:11px}.poly-slice-inset{position:absolute;right:8px;bottom:29px;width:102px;background:#ffffffed;border:1px solid #efd2dd;border-radius:10px;padding:3px;z-index:3;pointer-events:none;text-align:center}.poly-slice-inset svg{display:block;width:100%;height:85px}.poly-slice-inset strong{font-size:11px;color:#b52f59}.poly-slice-controls{padding:6px 9px;background:#fff7fa;display:flex;gap:8px;align-items:center}.poly-slice-controls>div{display:flex;gap:3px}.poly-slice-controls button{font-size:10px;padding:6px}.poly-slice-controls label{font-size:10px;display:flex;gap:4px;align-items:center;flex:1}.poly-slice-controls input{min-width:30px;width:100%}
 @media(max-width:600px){#poly:not(.thought-mode) #polyCanvas{height:clamp(210px,31dvh,270px)}.poly-info-details{font-size:10px;margin:2px 0}.poly-info-details p{font-size:10px}.poly-slice-toggle{font-size:10px;padding:6px 8px}.poly-slice-inset{width:80px;right:6px;bottom:28px}.poly-slice-inset svg{height:65px}.poly-slice-inset strong{font-size:10px}}
 @media(max-width:600px){.poly-slice-inset{top:8px;left:6px;right:auto;bottom:auto;width:64px}.poly-slice-inset svg{height:52px}.poly-slice-inset strong{font-size:9px}}
+/* 주소창과 하단 탐색 영역을 제외한 짧은 휴대폰 화면 */
+@media(max-width:600px) and (max-height:760px){
+#poly:not(.thought-mode) #polyQuestion{display:none}
+#poly:not(.thought-mode) .poly-card h2{display:none}
+#poly:not(.thought-mode) .poly-info-details{margin:0;font-size:9px}
+#poly:not(.thought-mode) .poly-card{padding:6px 8px}
+#poly:not(.thought-mode) #polyForm{margin-top:3px;gap:3px}
+#poly:not(.thought-mode) #polyMessage:not(.success):not(.error){display:none}
+#poly:not(.thought-mode) #polyCanvas{height:clamp(160px,29dvh,220px)}
+#poly:not(.thought-mode) .poly-definition{padding:4px 8px;margin-bottom:4px}
+#poly:not(.thought-mode) #polyButtons{margin-bottom:5px;gap:3px}
+#poly:not(.thought-mode) #polyButtons>button{padding:5px 1px}
+#poly:not(.thought-mode) .thought-tools{padding-top:3px}
+#poly:not(.thought-mode) .thought-tools button,#poly:not(.thought-mode) .poly-summary-link{padding:5px 1px}
+#poly:not(.thought-mode) .cube-net-heading{margin-bottom:2px}
+#poly:not(.thought-mode) #cubeNetList[data-count="11"] svg{height:17px}
+#poly:not(.thought-mode) #cubeNetList[data-count="11"] button{padding:2px 1px}
+#poly:not(.thought-mode) #polyHint{right:8px;bottom:6px;padding:5px 1px}
+#poly:not(.thought-mode) .poly-slice-controls{padding:3px 6px}
+#poly:not(.thought-mode) .poly-slice-controls button{padding:5px}
+#poly:not(.thought-mode) .poly-transport{padding:4px 6px}
+#poly:not(.thought-mode) .poly-transport button{padding:6px}
+#poly:not(.thought-mode) .poly-scrubber{padding:2px 7px 3px}
+#poly:not(.thought-mode) .net-key{margin:1px 0}
+}
+@media(max-width:600px) and (max-height:760px){
+body:has(#poly:not([hidden])) header{height:40px;min-height:40px}
+#poly:not(.thought-mode) #polyCanvas{height:clamp(150px,25dvh,180px)}
+#poly:not(.thought-mode) .net-key{display:none}
+}
